@@ -1,6 +1,5 @@
 -- objects
-local player = game:GetService("Players").LocalPlayer
--- main
+
 return {
 	["configVer"] = 9, -- don't touch this!
 	-- @tweaks
