@@ -1,7 +1,5 @@
 -- objects
 local player = game:GetService("Players").LocalPlayer
-local username = player.Name
-local someid = 7192763922
 -- main
 return {
 	["configVer"] = 9, -- don't touch this!
@@ -55,7 +53,8 @@ return {
 	["scriptMacros"] = {
 		["username"] = player.Name,
 		["userid"] = player.UserId,
-		["placeid"] = game.PlaceId
+		["placeid"] = game.PlaceId,
+		["someid"] = 7192763922
 	},
 
 	-- $backdoor payloads
